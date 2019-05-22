@@ -1,3 +1,8 @@
+import consts from '../consts';
+import ACTION from './ActionHandler';
+
+const ACTION_NAME = consts.ACTION_NAME;
+
 class KeyboardHandler {
     protected name: string;
     constructor(name: string) {
@@ -9,56 +14,39 @@ class KeyboardHandler {
      * @param {any} e
      */
     public onKeydown = (e: any) => {
+        const actionName = this.__getActionName__(e);
+
+        if (actionName) {
+            e.preventDefault();
+            e.stopPropagation();
+            ACTION[actionName].apply(this);
+        }
+    }
+
+    /**
+     * Returns the name of the action corresponding to the event
+     * @param {any} e
+     * @return {string}
+     */
+    private __getActionName__(e: any): string {
         const isCtrl: boolean = e.ctrlKey;
         const isMeta: boolean = e.metaKey;
         const keyCode: number = e.keyCode;
-        let action: any = null;
+        let actionName: string = "";
 
         if ((isCtrl || isMeta)) {
             if(keyCode === 66) {
-                action = this.__bold__;
+                actionName = ACTION_NAME.BOLD;
             } else if (keyCode === 229) {
-                action = this.__italic__;
+                actionName = ACTION_NAME.ITALIC;
             } else if (keyCode === 85) {
-                action = this.__underline__;
+                actionName = ACTION_NAME.UNDERLINE;
             } else if (keyCode === 83) {
-                action = this.__strike__;
+                actionName = ACTION_NAME.STRIKE_THROUGH;
             }
         }
 
-        if (action) {
-            e.preventDefault();
-            e.stopPropagation();
-            action.apply();
-        }
-    }
-
-    /**
-     * bold action
-     */
-    private __bold__() {
-        document.execCommand('bold');
-    }
-
-    /**
-     * italic action
-     */
-    private __italic__() {
-        document.execCommand('italic');
-    }
-
-    /**
-     * underline action
-     */
-    private __underline__() {
-        document.execCommand('underline');
-    }
-
-    /**
-     * strike action
-     */
-    private __strike__() {
-        document.execCommand('strikeThrough');
+        return actionName;
     }
 }
 
