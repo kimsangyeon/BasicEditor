@@ -11,9 +11,9 @@ class BasicEditor {
 
     /**
      * return keyBoard Handler
-     * @param {KeyboardHandler}
+     * @return {KeyboardHandler}
      */
-    public getKeyboardHandler() {
+    public getKeyboardHandler(): KeyboardHandler {
         return this.keyBoardHandler;
     }
 }
