@@ -11,7 +11,7 @@ class Editor extends React.Component {
     public render() {
         const keyboradHandler = this.editor.getKeyboardHandler();
         return (
-        <div id="basicEditor" className="Editor" contentEditable={true} onKeyDown={keyboradHandler.onKeydown}/>
+            <div id="basicEditor" contentEditable={true} onKeyDown={keyboradHandler.onKeydown}/>
         );
     }
 }
