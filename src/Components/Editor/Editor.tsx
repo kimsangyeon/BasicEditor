@@ -1,5 +1,5 @@
 import * as React from 'react';
-import BasicEditor from '../../js/BasicEditor';
+import BasicEditor from '../../ts/BasicEditor';
 
 class Editor extends React.Component {
     public editor: BasicEditor;

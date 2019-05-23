@@ -1,6 +1,6 @@
 import * as React from 'react';
-import consts from '../../../js/consts';
-import MouseEventHandler from '../../../js/Handler/MouseEventHandler';
+import consts from '../../../ts/consts';
+import MouseEventHandler from '../../../ts/Handler/MouseEventHandler';
 
 const ACTION_NAME = consts.ACTION_NAME;
 
