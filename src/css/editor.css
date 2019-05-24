@@ -7,13 +7,15 @@
 #be-toolbar {
     background-color: #fff;
     border: 1px solid royalblue;
+    height: 32px;
 }
 
 #be-toolbar .be-icon-container {
     width: 32px;
     height: 32px;
-    padding: 2px;
     position: relative;
+    display: inline-block;
+    border: 1px solid royalblue;
 }
 
 #be-toolbar .be-icon-container .be-icon {
