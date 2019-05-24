@@ -10,7 +10,7 @@ class Underline extends React.Component {
         return (
             <div className="be-icon-container" data-name={ACTION_NAME.UNDERLINE} onMouseDown={mouseEventHandler.onMouseDownIcon}>
                 <div className="be-icon">
-                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80.000000 80.000000" preserveAspectRatio="xMidYMid meet">
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 80.000000 80.000000" preserveAspectRatio="xMidYMid meet">
                         <g transform="translate(0.000000,80.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
                             <path d="M190 515 c0 -201 3 -216 57 -267 39 -37 73 -48 153 -48 80 0 114 11
                                 153 48 54 51 57 66 57 267 l0 185 -55 0 -55 0 0 -155 c0 -184 -9 -216 -64

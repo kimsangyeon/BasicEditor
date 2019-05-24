@@ -10,7 +10,7 @@ class StrikeThrough extends React.Component {
         return (
             <div className="be-icon-container" data-name={ACTION_NAME.STRIKE_THROUGH} onMouseDown={mouseEventHandler.onMouseDownIcon}>
                 <div className="be-icon">
-                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80.000000 80.000000" preserveAspectRatio="xMidYMid meet">
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 80.000000 80.000000" preserveAspectRatio="xMidYMid meet">
                         <g transform="translate(0.000000,80.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
                             <path d="M170 630 l0 -50 85 0 85 0 0 -85 0 -85 -75 0 c-43 0 -75 -4 -75 -10
                                 0 -6 77 -10 210 -10 133 0 210 4 210 10 0 6 -32 10 -75 10 l-75 0 0 85 0 85

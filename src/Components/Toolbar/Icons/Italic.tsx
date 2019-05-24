@@ -10,7 +10,7 @@ class Italic extends React.Component {
         return (
             <div className="be-icon-container" data-name={ACTION_NAME.ITALIC} onMouseDown={mouseEventHandler.onMouseDownIcon}>
                 <div className="be-icon">
-                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80.000000 80.000000" preserveAspectRatio="xMidYMid meet">
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 80.000000 80.000000" preserveAspectRatio="xMidYMid meet">
                         <g transform="translate(0.000000,80.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
                             <path d="M386 608 c-9 -40 -36 -165 -59 -278 l-44 -205 55 -3 c30 -2 56 -1 58
                                 1 2 2 29 120 59 263 30 142 57 267 59 277 4 15 -4 17 -54 17 l-58 0 -16 -72z
