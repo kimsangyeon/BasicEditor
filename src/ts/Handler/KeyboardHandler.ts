@@ -1,15 +1,12 @@
 import consts from '../consts';
 import ACTION from './ActionHandler';
-import SelectionHandler from './SelectionHandler';
 
 const ACTION_NAME = consts.ACTION_NAME;
 
 class KeyboardHandler {
     protected name: string;
-    private selectionHanlder: SelectionHandler;
     constructor(name: string) {
         this.name = name;
-        this.selectionHanlder = new SelectionHandler();
     }
 
     /**
@@ -24,8 +21,6 @@ class KeyboardHandler {
             e.stopPropagation();
             ACTION[actionName].apply(this);
         }
-
-        this.selectionHanlder.saveSelectionRange();
     }
 
     /**

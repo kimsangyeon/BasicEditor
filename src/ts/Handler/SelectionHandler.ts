@@ -45,7 +45,6 @@ class SelectionHandler {
        
         if (r && window.getSelection) {
             const sel: any = window.getSelection();
-            sel.removeAllRanges();
             sel.addRange(r);
         }
     }
