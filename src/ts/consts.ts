@@ -2,7 +2,8 @@ interface ActionName {
     BOLD: string,
     ITALIC: string,
     STRIKE_THROUGH: string,
-    UNDERLINE: string
+    UNDERLINE: string,
+    UNDO: string
 };
 
 interface Consts {
@@ -14,7 +15,8 @@ const consts: Consts = {
         BOLD: "bold",
         ITALIC: "italic",
         STRIKE_THROUGH: "strikeThrough",
-        UNDERLINE: "underline"
+        UNDERLINE: "underline",
+        UNDO: "undo"
     }
 };
 
