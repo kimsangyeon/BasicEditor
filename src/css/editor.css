@@ -28,10 +28,6 @@
     display: inline-block;
 }
 
-#be-toolbar .be-icon-container.on {
-    background-color: lightgray;
-}
-
 #be-toolbar .be-icon-container:hover {
     background-color: rgba(225, 225, 225, 0.5)
 }
