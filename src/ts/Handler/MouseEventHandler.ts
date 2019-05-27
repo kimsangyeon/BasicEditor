@@ -5,7 +5,6 @@ class MouseEventHandler {
     private selectionHanlder: SelectionHandler;
     constructor() {
         this.selectionHanlder = new SelectionHandler();
-        window.addEventListener("mouseup", this.onMouseUp);
     }
 
     /**
@@ -14,24 +13,16 @@ class MouseEventHandler {
      */
     public onMouseDownIcon = (e: any) => {
         const actionName = e.currentTarget.dataset.name;
-        const range = this.selectionHanlder.getSelectionRange();
-
-        this.selectionHanlder.restoreSelectionRange(range);
+        this.selectionHanlder.saveSelectionRange();
 
         if (actionName) {
             e.preventDefault();
             e.stopPropagation();
             ACTION[actionName].apply(this);
         }
-    }
 
-    /**
-     * Mouse on Up Event
-     * save Selection Range
-     * @param {any} e
-     */
-    public onMouseUp = (e: any) => {
-        this.selectionHanlder.saveSelectionRange();
+        const range = this.selectionHanlder.getSelectionRange();
+        this.selectionHanlder.restoreSelectionRange(range);
     }
 }
 
