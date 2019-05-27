@@ -23,8 +23,6 @@ class MouseEventHandler {
             e.stopPropagation();
             ACTION[actionName].apply(this);
         }
-
-        this.__toggleIcon__(e);
     }
 
     /**
@@ -34,25 +32,6 @@ class MouseEventHandler {
      */
     public onMouseUp = (e: any) => {
         this.selectionHanlder.saveSelectionRange();
-    }
-
-    /**
-     * Toggle Icon background
-     * @param {any} e
-     */
-    private __toggleIcon__(e: any) {
-        const elTarget = e.currentTarget;
-        const classList = elTarget.className.split(" ")
-        if (classList.indexOf("on") > -1) {
-            elTarget.className = classList.reduce((result: string, cl: string) => {
-                if (cl === "on") {
-                    return result;
-                }
-                return result = result.length > 0 ? result += " " + cl : result = cl;
-            }, "");
-        } else {
-            elTarget.className += " on";
-        }
     }
 }
 
