@@ -16,6 +16,12 @@ const ActionHandler = {
     },
     [ACTION_NAME.UNDERLINE]: () => {
         document.execCommand('underline');
+    },
+    [ACTION_NAME.UNDO]: () => {
+        document.execCommand('undo');
+    },
+    [ACTION_NAME.REDO]: () => {
+        document.execCommand('redo');
     }
 }
 
