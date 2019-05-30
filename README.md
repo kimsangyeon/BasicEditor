@@ -5,7 +5,9 @@
 ![basic editor](./images/basic-editor.png)
 This editor was created in JavaScript. <br>
 
-### 
+<br>
+
+### Editor Action
 
 <br>
 
@@ -39,8 +41,8 @@ This editor was created in JavaScript. <br>
 
 <br>
 
-## LIB
-- React (create-react-app)
+## Dependencies
+- React
 - Typescript
 - Webpack
 - Babel
