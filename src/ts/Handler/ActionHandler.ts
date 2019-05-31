@@ -5,22 +5,22 @@ import consts from '../consts';
  */
 const ACTION_NAME = consts.ACTION_NAME;
 const ActionHandler = {
-    [ACTION_NAME.BOLD]: () => {
+    [ACTION_NAME.BOLD]: (): void => {
         document.execCommand('bold');
     },
-    [ACTION_NAME.ITALIC]: () => {
+    [ACTION_NAME.ITALIC]: (): void => {
         document.execCommand('italic');
     },
-    [ACTION_NAME.STRIKE_THROUGH]: () => {
+    [ACTION_NAME.STRIKE_THROUGH]: (): void => {
         document.execCommand('strikeThrough');
     },
-    [ACTION_NAME.UNDERLINE]: () => {
+    [ACTION_NAME.UNDERLINE]: (): void => {
         document.execCommand('underline');
     },
-    [ACTION_NAME.UNDO]: () => {
+    [ACTION_NAME.UNDO]: (): void => {
         document.execCommand('undo');
     },
-    [ACTION_NAME.REDO]: () => {
+    [ACTION_NAME.REDO]: (): void => {
         document.execCommand('redo');
     }
 }

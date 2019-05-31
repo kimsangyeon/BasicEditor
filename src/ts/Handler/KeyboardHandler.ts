@@ -13,8 +13,8 @@ class KeyboardHandler {
      * Keyboard keyDown Event & Execute the action
      * @param {any} e
      */
-    public onKeydown = (e: any) => {
-        const actionName = this.__getActionName__(e);
+    public onKeydown = (e: any): void => {
+        const actionName: string = this.__getActionName__(e);
 
         if (actionName) {
             e.preventDefault();
