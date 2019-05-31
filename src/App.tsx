@@ -5,10 +5,10 @@ import Toolbar from './Components/Toolbar/Toolbar';
 class App extends React.Component {
     public render() {
         return (
-        <div className="App">
-            <Toolbar />
-            <Editor/>
-        </div>
+            <div className="App">
+                <Toolbar />
+                <Editor/>
+            </div>
         );
     }
 }
