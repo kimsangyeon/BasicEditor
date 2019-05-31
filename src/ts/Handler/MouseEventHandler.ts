@@ -11,7 +11,7 @@ class MouseEventHandler {
      * Mouse on Down Event & Execute the action
      * @param {any} e
      */
-    public onMouseDownIcon = (e: any) => {
+    public onMouseDownIcon = (e: any): void => {
         const actionName = e.currentTarget.dataset.name;
         this.selectionHanlder.saveSelectionRange();
 
