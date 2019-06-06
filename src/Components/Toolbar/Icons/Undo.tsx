@@ -5,7 +5,7 @@ import MouseEventHandler from '../../../ts/Handler/MouseEventHandler';
 const ACTION_NAME = consts.ACTION_NAME;
 
 class Undo extends React.Component {
-    
+
     public render() {
         const mouseEventHandler = new MouseEventHandler();
         return (
