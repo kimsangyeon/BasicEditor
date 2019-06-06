@@ -4,11 +4,24 @@ import MouseEventHandler from '../../../ts/Handler/MouseEventHandler';
 
 const ACTION_NAME = consts.ACTION_NAME;
 
-class Bold extends React.Component {
+interface Props {
+    bold: boolean
+};
+
+class Bold extends React.Component { 
+    public props: Props;
+       
+    constructor(props: Props) {
+        super(props);
+    }
+
     public render() {
         const mouseEventHandler = new MouseEventHandler();
+        const {bold} = this.props;
+        const className = bold ? "be-icon-container active-container" : "be-icon-container";
+
         return (
-            <div className="be-icon-container" data-name={ACTION_NAME.BOLD} onMouseDown={mouseEventHandler.onMouseDownIcon}>
+            <div className={className} data-name={ACTION_NAME.BOLD} onMouseDown={mouseEventHandler.onMouseDownIcon}>
                 <div className="be-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="16px" height="16px" viewBox="0 0 80.000000 80.000000" preserveAspectRatio="xMidYMid meet">
                         <g transform="translate(0.000000,80.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">

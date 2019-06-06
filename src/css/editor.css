@@ -32,6 +32,10 @@
     background-color: rgba(225, 225, 225, 0.5)
 }
 
+#be-toolbar .be-icon-container.active-container {
+    background-color: lightgray;
+}
+
 
 #be-toolbar .be-icon-container .be-icon {
     width: 100%;
