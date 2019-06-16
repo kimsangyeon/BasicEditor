@@ -5,6 +5,7 @@ import Italic from './Icons/Italic';
 import Redo from './Icons/Redo';
 import StrikeThrough from './Icons/StrikeThrough';
 import Subscript from './Icons/Subscript';
+import Superscript from './Icons/Superscript';
 import Underline from './Icons/Underline';
 import Undo from './Icons/Undo';
 
@@ -13,6 +14,7 @@ interface IState {
     italic: boolean,
     strikeThrough: boolean,
     subscript: boolean,
+    superscript: boolean,
     underline: boolean
 }
 
@@ -22,6 +24,7 @@ class Toolbar extends React.Component {
         italic: false,
         strikeThrough: false,
         subscript: false,
+        superscript: false,
         underline: false
     }
 
@@ -38,6 +41,7 @@ class Toolbar extends React.Component {
             italic: this.status.getItalic(),
             strikeThrough: this.status.getStrike(),
             subscript: this.status.getSubscript(),
+            superscript: this.status.getSuperscript(),
             underline: this.status.getUnderline()
         }); 
     };
@@ -49,6 +53,7 @@ class Toolbar extends React.Component {
                 <Italic italic={this.state.italic}/>
                 <Underline underline={this.state.underline}/>
                 <StrikeThrough strikeThrough={this.state.strikeThrough}/>
+                <Superscript superscript={this.state.superscript}/>
                 <Subscript subscript={this.state.subscript}/>
                 <Undo/><Redo/>
             </div>
