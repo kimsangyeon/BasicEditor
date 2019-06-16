@@ -2,12 +2,14 @@ class Toolbar {
     protected bold: boolean;
     protected italic: boolean;
     protected strikeThrough: boolean;
+    protected subscript: boolean;
     protected underline: boolean;
 
     constructor(fn: () => void) {
        this.bold = false;
        this.italic = false;
        this.strikeThrough = false;
+       this.subscript = false;
        this.underline = false;
 
        this.__init__(fn);
@@ -36,6 +38,13 @@ class Toolbar {
     }
 
     /**
+     * Return subcript status
+     */
+    public getSubscript(): boolean {
+        return this.subscript;
+    }
+
+    /**
      * Return underline status
      */
     public getUnderline(): boolean {
@@ -55,6 +64,7 @@ class Toolbar {
                 this.bold = !!focusNode.parentElement.closest('#basicEditor b');
                 this.italic = !!focusNode.parentElement.closest('#basicEditor i');
                 this.strikeThrough = !!focusNode.parentElement.closest('#basicEditor strike');
+                this.subscript = !!focusNode.parentElement.closest('#basicEditor sub');
                 this.underline = !!focusNode.parentElement.closest('#basicEditor u');
             }
 
