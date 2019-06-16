@@ -17,6 +17,9 @@ const ActionHandler = {
     [ACTION_NAME.SUBSCRIPT]: (): void => {
         document.execCommand('subscript');
     },
+    [ACTION_NAME.SUPERSCRIPT]: (): void => {
+        document.execCommand('superscript');
+    },
     [ACTION_NAME.UNDERLINE]: (): void => {
         document.execCommand('underline');
     },
