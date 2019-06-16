@@ -14,6 +14,12 @@ const ActionHandler = {
     [ACTION_NAME.STRIKE_THROUGH]: (): void => {
         document.execCommand('strikeThrough');
     },
+    [ACTION_NAME.SUBSCRIPT]: (): void => {
+        document.execCommand('subscript');
+    },
+    [ACTION_NAME.SUPERSCRIPT]: (): void => {
+        document.execCommand('superscript');
+    },
     [ACTION_NAME.UNDERLINE]: (): void => {
         document.execCommand('underline');
     },
