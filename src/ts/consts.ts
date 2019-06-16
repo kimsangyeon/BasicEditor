@@ -4,6 +4,7 @@ interface ActionName {
     REDO: string,
     STRIKE_THROUGH: string,
     SUBSCRIPT: string,
+    SUPERSCRIPT: string,
     UNDERLINE: string,
     UNDO: string
 };
@@ -18,7 +19,8 @@ const consts: Consts = {
         ITALIC: "italic",
         REDO: "redo",
         STRIKE_THROUGH: "strikeThrough",
-        SUBSCRIPT: 'subscript',
+        SUBSCRIPT: "subscript",
+        SUPERSCRIPT: "superscript",
         UNDERLINE: "underline",
         UNDO: "undo",
     }
