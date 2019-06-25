@@ -16,9 +16,9 @@ class Superscript extends React.Component {
     }
 
     public render() {
-        const mouseEventHandler = new MouseEventHandler();
-        const {superscript} = this.props;
-        const className = superscript ? "be-icon-container active-container" : "be-icon-container";
+        const mouseEventHandler: MouseEventHandler = new MouseEventHandler();
+        const {superscript}: Props = this.props;
+        const className: string = superscript ? "be-icon-container active-container" : "be-icon-container";
 
         return (
             <div className={className} data-name={ACTION_NAME.SUPERSCRIPT} onMouseDown={mouseEventHandler.onMouseDownIcon}>
