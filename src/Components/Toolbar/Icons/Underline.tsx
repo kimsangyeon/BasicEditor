@@ -16,9 +16,9 @@ class Underline extends React.Component {
     }
 
     public render() {
-        const mouseEventHandler = new MouseEventHandler();
-        const {underline} = this.props;
-        const className = underline ? "be-icon-container active-container" : "be-icon-container";
+        const mouseEventHandler: MouseEventHandler = new MouseEventHandler();
+        const {underline}: Props = this.props;
+        const className: string = underline ? "be-icon-container active-container" : "be-icon-container";
 
         return (
             <div className={className} data-name={ACTION_NAME.UNDERLINE} onMouseDown={mouseEventHandler.onMouseDownIcon}>

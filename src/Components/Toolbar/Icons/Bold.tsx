@@ -16,9 +16,9 @@ class Bold extends React.Component {
     }
 
     public render() {
-        const mouseEventHandler = new MouseEventHandler();
-        const {bold} = this.props;
-        const className = bold ? "be-icon-container active-container" : "be-icon-container";
+        const mouseEventHandler: MouseEventHandler = new MouseEventHandler();
+        const {bold}: Props = this.props;
+        const className: string  = bold ? "be-icon-container active-container" : "be-icon-container";
 
         return (
             <div className={className} data-name={ACTION_NAME.BOLD} onMouseDown={mouseEventHandler.onMouseDownIcon}>

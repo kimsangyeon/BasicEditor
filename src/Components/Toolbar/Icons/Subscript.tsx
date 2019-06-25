@@ -16,9 +16,9 @@ class Subscript extends React.Component {
     }
 
     public render() {
-        const mouseEventHandler = new MouseEventHandler();
-        const {subscript} = this.props;
-        const className = subscript ? "be-icon-container active-container" : "be-icon-container";
+        const mouseEventHandler: MouseEventHandler = new MouseEventHandler();
+        const {subscript}: Props = this.props;
+        const className: string = subscript ? "be-icon-container active-container" : "be-icon-container";
 
         return (
             <div className={className} data-name={ACTION_NAME.SUBSCRIPT} onMouseDown={mouseEventHandler.onMouseDownIcon}>

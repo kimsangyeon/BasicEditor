@@ -7,7 +7,7 @@ const ACTION_NAME = consts.ACTION_NAME;
 class Redo extends React.Component {
 
     public render() {
-        const mouseEventHandler = new MouseEventHandler();
+        const mouseEventHandler: MouseEventHandler = new MouseEventHandler();
         return (
             <div className="be-icon-container" data-name={ACTION_NAME.REDO} onMouseDown={mouseEventHandler.onMouseDownIcon}>
                 <div className="be-icon">

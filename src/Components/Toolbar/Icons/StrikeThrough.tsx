@@ -16,9 +16,9 @@ class StrikeThrough extends React.Component {
     }
 
     public render() {
-        const mouseEventHandler = new MouseEventHandler();
-        const {strikeThrough} = this.props;
-        const className = strikeThrough ? "be-icon-container active-container" : "be-icon-container";
+        const mouseEventHandler: MouseEventHandler = new MouseEventHandler();
+        const {strikeThrough}: Props = this.props;
+        const className: string = strikeThrough ? "be-icon-container active-container" : "be-icon-container";
 
         return (
             <div className={className} data-name={ACTION_NAME.STRIKE_THROUGH} onMouseDown={mouseEventHandler.onMouseDownIcon}>

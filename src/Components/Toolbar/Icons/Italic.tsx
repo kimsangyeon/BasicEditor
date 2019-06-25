@@ -16,9 +16,9 @@ class Italic extends React.Component {
     }
 
     public render() {
-        const mouseEventHandler = new MouseEventHandler();
-        const {italic} = this.props;
-        const className = italic ? "be-icon-container active-container" : "be-icon-container";
+        const mouseEventHandler: MouseEventHandler = new MouseEventHandler();
+        const {italic}: Props = this.props;
+        const className: string = italic ? "be-icon-container active-container" : "be-icon-container";
 
         return (
             <div className={className} data-name={ACTION_NAME.ITALIC} onMouseDown={mouseEventHandler.onMouseDownIcon}>
