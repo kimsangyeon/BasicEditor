@@ -1,6 +1,7 @@
 import * as React from 'react';
 import ToolbarStatus from '../../ts/Toolbar';
 import Bold from './Icons/Bold';
+import FontColor from './Icons/FontColor';
 import Italic from './Icons/Italic';
 import Redo from './Icons/Redo';
 import StrikeThrough from './Icons/StrikeThrough';
@@ -49,6 +50,7 @@ class Toolbar extends React.Component {
     public render() {
         return (
             <div id="be-toolbar" className="Toolbar">
+                <FontColor />
                 <Bold bold={this.state.bold}/>
                 <Italic italic={this.state.italic}/>
                 <Underline underline={this.state.underline}/>
