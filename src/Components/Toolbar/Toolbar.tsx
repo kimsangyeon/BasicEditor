@@ -50,11 +50,11 @@ class Toolbar extends React.Component {
     public render() {
         return (
             <div id="be-toolbar" className="Toolbar">
-                <FontColor />
                 <Bold bold={this.state.bold}/>
                 <Italic italic={this.state.italic}/>
                 <Underline underline={this.state.underline}/>
                 <StrikeThrough strikeThrough={this.state.strikeThrough}/>
+                <FontColor />
                 <Superscript superscript={this.state.superscript}/>
                 <Subscript subscript={this.state.subscript}/>
                 <Undo/><Redo/>
