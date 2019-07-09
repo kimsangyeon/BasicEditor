@@ -69,7 +69,7 @@ class Toolbar {
             const sel: any = window.getSelection();
             const focusNode: Node = sel.focusNode;
             
-            if (focusNode.parentElement) {
+            if (focusNode && focusNode.parentElement) {
                 this.bold = !!focusNode.parentElement.closest('#basicEditor b');
                 this.italic = !!focusNode.parentElement.closest('#basicEditor i');
                 this.strikeThrough = !!focusNode.parentElement.closest('#basicEditor strike');
