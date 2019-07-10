@@ -8,6 +8,9 @@ const ActionHandler = {
     [ACTION_NAME.BOLD]: (): void => {
         document.execCommand('bold');
     },
+    [ACTION_NAME.FONT_COLOR]: (): void => {
+        // do nothing
+    },
     [ACTION_NAME.ITALIC]: (): void => {
         document.execCommand('italic');
     },

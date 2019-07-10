@@ -1,5 +1,6 @@
 interface ActionName {
     BOLD: string,
+    FONT_COLOR: string,
     ITALIC: string,
     REDO: string,
     STRIKE_THROUGH: string,
@@ -16,6 +17,7 @@ interface Consts {
 const consts: Consts = {
     ACTION_NAME: {
         BOLD: "bold",
+        FONT_COLOR: 'fontColor',
         ITALIC: "italic",
         REDO: "redo",
         STRIKE_THROUGH: "strikeThrough",

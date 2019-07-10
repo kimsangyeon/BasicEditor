@@ -31,7 +31,6 @@ class Toolbar {
         return this.italic;
     }
 
-
     /**
      * Return strikeThrough status
      */
