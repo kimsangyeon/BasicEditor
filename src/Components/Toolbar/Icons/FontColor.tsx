@@ -1,13 +1,15 @@
 import * as React from 'react';
-import { SketchPicker } from 'react-color';
+import { GithubPicker } from 'react-color';
 import consts from '../../../ts/consts';
+import MouseEventHandler from '../../../ts/Handler/MouseEventHandler';
 
 const ACTION_NAME = consts.ACTION_NAME;
 
 
 class FontColor extends React.Component {
     public state = {
-        displayColorPicker: false
+        displayColorPicker: false,
+        mouseEventHandler: new MouseEventHandler()
     };
     public handleClick = () => {
         this.setState({ displayColorPicker: !this.state.displayColorPicker })
@@ -18,13 +20,13 @@ class FontColor extends React.Component {
     };
 
     public handleChange = (color: any) => {
-        console.log(color);
+        document.execCommand('foreColor', false, color.hex);
     };
 
     public render() {
         return (
             <div style={{display: 'inline-block', position: 'relative'}}>
-                <div className="be-icon-container" data-name={ACTION_NAME.FONT_COLOR} onClick={this.handleClick}>
+                <div className="be-icon-container" data-name={ACTION_NAME.FONT_COLOR} onMouseDown={this.state.mouseEventHandler.onMouseDownIcon} onClick={this.handleClick}>
                     <div className="be-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="16px" height="16px" viewBox="0 0 80.000000 80.000000" preserveAspectRatio="xMidYMid meet">
                             <g transform="translate(0.000000,80.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
@@ -43,9 +45,9 @@ class FontColor extends React.Component {
                 </div>
                 {
                     this.state.displayColorPicker ?
-                    <div style={{position: 'absolute', zIndex: 2}}>
+                    <div style={{position: 'absolute', zIndex: 2}} data-name={ACTION_NAME.FONT_COLOR} onMouseDown={this.state.mouseEventHandler.onMouseDownIcon} >
                         <div style={{position: 'fixed', top: 0, right: 0, bottom: 0, left: 0}} onClick={this.handleClose}/>
-                        <SketchPicker onChange={this.handleChange}/>
+                        <GithubPicker onChange={this.handleChange}/>
                     </div> : null
                 }
                 
