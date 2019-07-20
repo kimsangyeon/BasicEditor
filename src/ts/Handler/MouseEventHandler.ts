@@ -2,9 +2,9 @@ import ACTION from './ActionHandler';
 import SelectionHandler from './SelectionHandler';
 
 class MouseEventHandler {
-    private selectionHanlder: SelectionHandler;
+    private selectionHandler: SelectionHandler;
     constructor() {
-        this.selectionHanlder = new SelectionHandler();
+        this.selectionHandler = new SelectionHandler();
     }
 
     /**
@@ -13,7 +13,7 @@ class MouseEventHandler {
      */
     public onMouseDownIcon = (e: any): void => {
         const actionName = e.currentTarget.dataset.name;
-        this.selectionHanlder.saveSelectionRange();
+        this.selectionHandler.saveSelectionRange();
 
         if (actionName) {
             e.preventDefault();
@@ -21,8 +21,8 @@ class MouseEventHandler {
             ACTION[actionName].apply(this);
         }
 
-        const range = this.selectionHanlder.getSelectionRange();
-        this.selectionHanlder.restoreSelectionRange(range);
+        const range = this.selectionHandler.getSelectionRange();
+        this.selectionHandler.restoreSelectionRange(range);
     }
 }
 
