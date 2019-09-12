@@ -31,6 +31,21 @@ This editor was created in JavaScript. <br>
 
 <br>
 
+![fontColor](./images/fontColor.png)
+- fontColor
+
+<br>
+
+![superscript](./images/superscript.png)
+- superscript
+
+<br>
+
+![subscript](./images/subscript.png)
+- subscript
+
+<br>
+
 ![undo](./images/undo.png)
 - undo
 
